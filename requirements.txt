@@ -1,75 +1,48 @@
-# --- System Fix ---
 PyYAML>=6.0
-
-# --- Core Data Science ---
-# Bỏ version cứng để pip tự tìm bản tương thích
 pandas
 numpy
 scikit-learn
 xgboost
 lightgbm
-
-# --- Deep Learning ---
-# LƯU Ý: Nếu không dùng Tensorflow, hãy XÓA dòng dưới đi.
-# Torch và Tensorflow cùng cài rất dễ gây lỗi.
 torch
 tensorflow
 transformers
 darts
-
-# --- Financial Data ---
 yfinance
 alpha-vantage
 pandas-datareader
-# ta-lib  <-- Dòng này đã bị comment lại. Đọc lý do bên dưới!
+# LƯU Ý: Docker cài được cái này, nhưng Dockerfile phải có lệnh cài thư viện C
+ta-lib
 quantlib
-
-# --- Models ---
 sdepy
 scipy
 statsmodels
-
-# --- Database ---
 duckdb
 sqlalchemy
 redis
 asyncpg
 psycopg2-binary
 aiosqlite
-
-# --- NLP ---
 finbert-embedding
 textblob
 vaderSentiment
-
-# --- APIs ---
 newsapi-python
 tweepy
 requests
 feedparser
-
-# --- Web Backend ---
 fastapi
 uvicorn
 pydantic
 celery
 aiohttp
 websockets
-
-# --- Dashboard ---
-# Bạn dùng cả 3 cái này? Nếu chỉ dùng Streamlit thì xóa Dash/Bokeh đi cho nhẹ
 streamlit
 plotly
 dash
 bokeh
-
-# --- Config & Logging ---
 python-dotenv
 pydantic-settings
 hydra-core
 loguru
 prometheus-client
 sentry-sdk
-
-# --- BỎ CÁC TOOLS DEV & TEST (Không cần thiết khi deploy) ---
-# black, flake8, mypy, pytest, docker... đã bị xóa để giảm tải.
